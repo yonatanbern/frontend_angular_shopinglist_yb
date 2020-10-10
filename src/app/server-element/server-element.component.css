@@ -1,0 +1,24 @@
+.card {
+  margin: 10px 10px;
+  display: inline-block;
+}
+
+.card-header {
+  font-weight: bold;
+}
+
+.btn-danger{
+  float: right;
+}
+
+.btn-info {
+  float: right;
+  margin-right: 7px;
+}
+
+.close-update {
+  margin-top: 10px;
+}
+.buttons-card {
+  margin-bottom: 25px;
+}

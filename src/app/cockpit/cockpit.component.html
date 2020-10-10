@@ -1,0 +1,29 @@
+<div *ngIf="!display_head" class="container">
+  <h1>Welcome to Items' List project - Client-side Website!</h1> <br>
+  <h4>press the button below to add a new Item to your List</h4> <br>
+  <button class="btn btn-primary f-b" (click)="displayHead()"> press to Add new item</button>
+
+</div>
+
+<div *ngIf="display_head" class="row">
+  <div class="col-xs-12">
+    <h2>Add new Item</h2>
+    <label>Item name</label>
+    <input type="text" class="form-control" [(ngModel)]="item_name">
+    <!-- <input type="text" class="form-control" #serverInputNameHtml> -->
+    <label>Item ID</label>
+    <input type="text" class="form-control" [(ngModel)]="item_id">
+    <label>Item description</label>
+    <input type="text" class="form-control" [(ngModel)]="item_description">
+    <label>Item count</label>
+    <input type="text" class="form-control" [(ngModel)]="item_count">
+    <img src="assets/images/shopingcart.png" class="img-shoping-cart">
+
+    <br>
+    <button class="btn btn-primary" (click)="onAddServer()">Add Item</button>
+    <!-- <button
+      class="btn btn-primary"
+      (click)="onAddBlueprint()">Add Server Blueprint</button> -->
+      <button class="btn btn-primary" (click)="onClickReturn()">return</button>
+  </div>
+</div>

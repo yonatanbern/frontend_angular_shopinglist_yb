@@ -1,0 +1,23 @@
+.btn-primary {
+  margin: auto 5px;
+}
+
+.f-b{
+  position:relative;
+  padding-left: 35px;
+  padding-right: 35px;
+  left:38%;
+}
+
+h4 {
+  position:relative;
+
+  left:8%
+
+}
+
+.img-shoping-cart {
+  position: absolute;
+  left: 42%;
+  bottom: 195px;
+}

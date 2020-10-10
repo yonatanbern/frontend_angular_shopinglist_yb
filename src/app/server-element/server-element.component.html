@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card-header">{{ item_element.name }}</div>
+  <div class="card-body">
+
+    <b>ID:</b> {{item_element.id}} <br>
+    <b>Description:</b> {{item_element.description}} <br>
+    <b>Amount:</b> {{item_element.count}} <br> <br>
+
+    <div class="buttons-card">
+      <button type="button" class="btn btn-danger btn-sm" (click)="onClickDelete()">Delete</button>
+      <button *ngIf="!update_form_display" type="button" class="btn btn-info btn-sm"
+        (click)="onClickUpdate()">Update</button>
+      <div *ngIf="update_form_display">
+        <br>
+        <label>Enter amount:</label>
+        <input type="text" class="form-control" [(ngModel)]="amount_to_update">
+        <button class="btn btn-info btn-sm close-update" (click)="onClickCloseUpdate()">close</button>
+        <button class="btn btn-info btn-sm close-update" (click)="onClickUpdatePlus()">+</button>
+        <button class="btn btn-info btn-sm close-update" (click)="onClickCloseUpdateMinus()">-</button>
+      </div>
+    </div>
+  </div>
+</div>

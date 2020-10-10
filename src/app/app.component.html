@@ -1,0 +1,22 @@
+<app-header (contactme_event)="displayContactMe($event)" (contactol_event)="displayOl($event)"></app-header>
+<div *ngIf="!contact_me_swtch ;else other_content" class="container">
+  <app-cockpit (serverCreate)="onServerAdded($event)" ></app-cockpit>
+  <hr>
+  <h3>List of Items:</h3>
+  <h5 *ngIf="serverElements.length ==0">Start by adding an item..</h5>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-server-element *ngFor="let selem of serverElements"
+      [item_element]=selem (item_delete_event)="onDeleteItem($event)" (item_update_plus_event)="onUpdatePlus($event)" (item_update_minus_event)="onUpdateMinus($event)"></app-server-element>
+    </div>
+  </div>
+</div>
+
+<ng-template #other_content>
+  <div class="container con-me">
+    <h3> <b>email:</b>  yonatan.bernstein5@gmail.com</h3>
+    <h3> <b>cellphone:</b>  052-5247162</h3>
+    <img src="assets/images/chipp.jpg" class="img-chips">
+    <h5 class="fr">just fries photo..</h5>
+  </div>
+</ng-template>

@@ -1,0 +1,30 @@
+h1 {
+  text-align: center;
+}
+
+.navbar.first {
+  background-color: #1d61eb;
+}
+.navbar-brand{
+  color: white;
+}
+
+.navbar-brand:hover{
+  color: rgb(211, 209, 209);
+}
+
+.nav-link{
+  color: white;
+}
+
+.nav-link:hover{
+  color: rgb(211, 209, 209);
+}
+
+.dropdown-menu {
+  font-size: small;
+}
+
+.navbar{
+  margin-bottom: 40px;
+}
