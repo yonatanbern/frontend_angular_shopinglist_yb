@@ -8,8 +8,9 @@
 
     <div class="buttons-card">
       <button type="button" class="btn btn-danger btn-sm" (click)="onClickDelete()">Delete</button>
-      <button *ngIf="!update_form_display" type="button" class="btn btn-info btn-sm"
-        (click)="onClickUpdate()">Update</button>
+      <button *ngIf="!update_form_display" type="button" class="btn btn-info btn-sm" (click)="onClickUpdate()">Update
+        amount</button>
+      <button *ngIf="!update_description_form_display" type="button" class="btn btn-info btn-sm" (click)="onClickUpdateDescDisplay()">Update desc</button>
       <div *ngIf="update_form_display">
         <br>
         <label>Enter amount:</label>
@@ -18,6 +19,14 @@
         <button class="btn btn-info btn-sm close-update" (click)="onClickUpdatePlus()">+</button>
         <button class="btn btn-info btn-sm close-update" (click)="onClickCloseUpdateMinus()">-</button>
       </div>
+      <div *ngIf="update_description_form_display">
+        <br>
+        <label>Enter new description:</label>
+        <input type="text" class="form-control" [(ngModel)]="description_to_update">
+        <button class="btn btn-info btn-sm close-update" (click)="onClickDescUpdate()">Submit</button>
+        <button class="btn btn-info btn-sm close-update" (click)="onClickCloseUpdateDesc()">close</button>
+      </div>
+
     </div>
   </div>
 </div>
