@@ -74,7 +74,7 @@ export class AppComponent implements OnInit {
     var id_i = input_obj.id;
     var amount_i = input_obj.count;
 
-    console.log("sending post req - add item!");
+    console.log("sending update req !");
     var item = new Item("", id_i, "add", amount_i);
     this.http.put('http://localhost:3000/items', item).subscribe(responseData => {
 
@@ -90,9 +90,25 @@ export class AppComponent implements OnInit {
     var id_i = input_obj.id;
     var amount_i = input_obj.count;
 
-    console.log("sending post req - add item!");
+    console.log("sending update req !");
     var item = new Item("", id_i, "sub", amount_i);
     this.http.put('http://localhost:3000/items', item).subscribe(responseData => {
+
+      this.updateServerElements(responseData);
+
+    });
+
+  }
+
+  //update description item http request
+  onUpdateDescription(input_obj: any) {
+
+    var id_i = input_obj.id;
+    var desc_i = input_obj.description;
+
+    console.log("sending update req!");
+    var item = new Item("", id_i, desc_i, "");
+    this.http.put('http://localhost:3000/items/updatedetail', item).subscribe(responseData => {
 
       this.updateServerElements(responseData);
 
