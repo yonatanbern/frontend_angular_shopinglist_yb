@@ -13,7 +13,10 @@ export class ServerElementComponent implements OnInit {
   @Output() item_update_plus_event = new EventEmitter<any>();
   @Output() item_update_minus_event = new EventEmitter<any>();
   update_form_display = false;
+  update_description_form_display = false;
   amount_to_update: string;
+  description_to_update: string;
+  @Output() item_update_description_event = new EventEmitter<any>();
 
   constructor() {
 
@@ -43,6 +46,17 @@ export class ServerElementComponent implements OnInit {
   onClickCloseUpdateMinus() {
     this.item_update_minus_event.emit({id: this.item_element.id, count: this.amount_to_update});
 
+  }
+
+  onClickUpdateDescDisplay(){
+    this.update_description_form_display = true;
+  }
+
+  onClickCloseUpdateDesc(){
+    this.update_description_form_display = false;
+  }
+  onClickDescUpdate(){
+    this.item_update_description_event.emit({id: this.item_element.id, description: this.description_to_update});
   }
 
 }
