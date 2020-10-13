@@ -7,7 +7,7 @@
   <div class="row">
     <div class="col-xs-12">
       <app-server-element *ngFor="let selem of serverElements"
-      [item_element]=selem (item_delete_event)="onDeleteItem($event)" (item_update_plus_event)="onUpdatePlus($event)" (item_update_minus_event)="onUpdateMinus($event)"></app-server-element>
+      [item_element]=selem (item_delete_event)="onDeleteItem($event)" (item_update_plus_event)="onUpdatePlus($event)" (item_update_minus_event)="onUpdateMinus($event)" (item_update_description_event)="onUpdateDescription($event)"></app-server-element>
     </div>
   </div>
 </div>
